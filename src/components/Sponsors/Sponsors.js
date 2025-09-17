@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Mail } from 'lucide-react';
-import { MacbookScroll } from "../UI/macbook-scroll";
+// import { MacbookScroll } from "../UI/macbook-scroll";
 
 const Sponsors = () => {
   const [ref, inView] = useInView({
@@ -151,31 +151,31 @@ const Sponsors = () => {
   ];
 
   // Custom Macbook Scroll for Sponsors
-  const SponsorsMacbookScroll = () => {
-    return (
-      <div className="w-full overflow-hidden bg-white dark:bg-[#0B0B0F] py-20">
-        <MacbookScroll
-          title={
-            <span>
-              BSides Agra 2025 Sponsorship <br /> Premium Visibility & Impact
-            </span>
-          }
-          badge={
-            <div className="h-10 w-10 -rotate-12 transform bg-red-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xs">BSA</span>
-            </div>
-          }
-          src={`/sponsors/macbook-showcase.png`}
-          showGradient={true}
-        />
-      </div>
-    );
-  };
+  // const SponsorsMacbookScroll = () => {
+  //   return (
+  //     <div className="w-full overflow-hidden bg-white dark:bg-[#0B0B0F] py-20">
+  //       <MacbookScroll
+  //         title={
+  //           <span>
+  //             BSides Agra 2025 Sponsorship <br /> Premium Visibility & Impact
+  //           </span>
+  //         }
+  //         badge={
+  //           <div className="h-10 w-10 -rotate-12 transform bg-red-600 rounded-full flex items-center justify-center">
+  //             <span className="text-white font-bold text-xs">BSA</span>
+  //           </div>
+  //         }
+  //         src={`/sponsors/macbook-showcase.png`}
+  //         showGradient={true}
+  //       />
+  //     </div>
+  //   );
+  // };
 
   return (
     <section id="sponsors" className="bg-gray-50">
       {/* Macbook Scroll Section */}
-      <SponsorsMacbookScroll />
+      {/* <SponsorsMacbookScroll /> */}
       
       <div className="container mx-auto px-6 py-20">
         <motion.div
