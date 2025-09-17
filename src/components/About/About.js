@@ -83,26 +83,24 @@ const About = () => {
               About BSides Agra
             </h4>
 
-            <div className="space-y-6">
-              <p className="text-lg md:text-xl leading-relaxed text-left">
-                
-              BSides Agra is not just another cybersecurity conference — it’s a rebellion carved in red stone. For the first time, 
-              the Taj city becomes the arena where hacker grit collides with heritage, and the underground 
-              rises to the spotlight. This is where legends won’t just attend — they’ll be made.
+            <div className="space-y-6 text-left">
+  <p className="text-lg md:text-xl leading-relaxed">
+    BSides Agra is not just another cybersecurity conference — it’s a rebellion carved in red stone. For the first time, 
+    the Taj city becomes the arena where hacker grit collides with heritage, and the underground 
+    rises to the spotlight. This is where legends won’t just attend — they’ll be made.
+  </p>
 
-              </p>
+  <p className="text-lg md:text-xl leading-relaxed">
+    At AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
+    and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
+    the ones who stayed up reading RFCs while the world scrolled reels, and for the defenders who 
+    burn logs in SOCs while red teamers break binaries. BSides Agra isn’t about suits, titles, or 
+    corporate polish — it’s about community, chaos, and creation. Here, firewalls will fall, 
+    payloads will drop, and minds will evolve. 
+    From heritage to hack, this is where India’s next wave of cybersecurity culture begins.
+  </p>
+</div>
 
-              <p className="text-lg md:text-xl leading-relaxed text-left">
-                At AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
-                and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
-                the ones who stayed up reading RFCs while the world scrolled reels, and for the defenders who 
-                burn logs in SOCs while red teamers break binaries. BSides Agra isn’t about suits, titles, or 
-                corporate polish — it’s about community, chaos, and creation. Here, firewalls will fall, 
-                payloads will drop, and minds will evolve. 
-                From heritage to hack, this is where India’s next wave of cybersecurity culture begins.
-              
-              </p>
-            </div>
           </div>
         </div>
 
