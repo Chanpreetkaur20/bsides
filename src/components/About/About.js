@@ -86,21 +86,20 @@ const About = () => {
             <div className="space-y-6">
               <p className="text-lg md:text-xl leading-relaxed text-left">
                 
-              BSides Agra was founded in 2023 & held its 2nd edition in 2024. BSides Agra
-              fostered a truly collaborative & informative environment, bringing together
-              cybersecurity professionals from various backgrounds. Our motto is to be
-              'Where Hackers Meet Heritage', reflecting our commitment to blending cutting-edge
-              cybersecurity discussions with the rich cultural heritage of Agra, India
+              BSides Agra is not just another cybersecurity conference — it’s a rebellion carved in red stone. For the first time, 
+              the Taj city becomes the arena where hacker grit collides with heritage, and the underground 
+              rises to the spotlight. This is where legends won’t just attend — they’ll be made.
+
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed text-left">
-                Since its inception, BSides Agra has attracted 2K+ participants over the years
-                that includes top hackers, security researchers, CISO's, corporates, Law
-                enforcement personnel, professionals, academicians & volunteers from different
-                fields. Participants collaborated & contributed through talks, workshops,
-                networking dinners, exhibitions, cybersecurity challenges & contests. Attendees
-                get the opportunity to engage with esteemed participants, explore IT security
-                trends & participate in workshops & challenges led by top presenters & speakers"
+                SAt AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
+                and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
+                the ones who stayed up reading RFCs while the world scrolled reels, and for the defenders who 
+                burn logs in SOCs while red teamers break binaries. BSides Agra isn’t about suits, titles, or 
+                corporate polish — it’s about community, chaos, and creation. Here, firewalls will fall, 
+                payloads will drop, and minds will evolve. 
+                From heritage to hack, this is where India’s next wave of cybersecurity culture begins.
               
               </p>
             </div>
