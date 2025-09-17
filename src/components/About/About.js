@@ -90,6 +90,7 @@ const About = () => {
     rises to the spotlight. This is where legends won’t just attend — they’ll be made.
   </p>
 
+
   <p className="text-lg md:text-xl leading-relaxed">
     At AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
     and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
