@@ -53,10 +53,10 @@ function App() {
         <Hero />
         <About />
         <Testimonials />
-        <Speakers />
-        <Sponsors />
         <Schedule />
         <Events />
+        <Speakers />
+        <Sponsors />
         <FAQ />
         <Contact />
       </main>
