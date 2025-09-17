@@ -52,7 +52,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Schedule />
         <Events />
         <Speakers />
