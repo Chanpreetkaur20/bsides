@@ -93,7 +93,7 @@ const About = () => {
               </p>
 
               <p className="text-lg md:text-xl leading-relaxed text-left">
-                SAt AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
+                At AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
                 and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
                 the ones who stayed up reading RFCs while the world scrolled reels, and for the defenders who 
                 burn logs in SOCs while red teamers break binaries. BSides Agra isn’t about suits, titles, or 
