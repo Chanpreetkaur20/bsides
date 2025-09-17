@@ -180,10 +180,11 @@ const About = () => {
             />
           </h3>
           <div className="flex justify-center space-x-8">
-            <a href="https://discord.gg/94VQPustG4" target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://discord.gg/94VQPustG4" target="_blank" rel="noopener noreferrer">
             <button className="bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-lg transition-colors">
               JOIN US
             </button>
+            </a>
             <button className="border border-white hover:bg-white/10 text-white font-bold py-3 px-8 rounded-lg transition-colors">
               Learn More
             </button>
