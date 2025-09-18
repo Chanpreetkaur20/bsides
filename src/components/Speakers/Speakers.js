@@ -321,7 +321,7 @@ const Speakers = () => {
               <p className="text-xl text-gray-300 mb-8 mx-auto text-center whitespace-nowrap">
   | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |
   <br/>
-  BSides Agra 0x01 is calling those who live, breathe, and break cybersecurity.
+  BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.
 </p>
 
               <motion.button
