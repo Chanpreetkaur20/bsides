@@ -86,21 +86,23 @@ const About = () => {
             <div className="space-y-6 text-left">
   <p className="text-lg md:text-xl leading-relaxed">
   BSides Agra is not just another cybersecurity conference — it’s<br />
-  a rebellion carved in red stone. For the first time, the Taj citys<br />
-  becomes the arena where hacker grit collides with heritage,s<br />
-  and the underground rises to the spotlight.s<br />
-  This is where legends won’t just attend — they’ll be made.
+  a rebellion carved in red stone. For the first time, the Taj city<br />
+  becomes the arena where hacker grit collides with heritage,<br />
+  and the underground rises to the spotlight. This is where<br />
+  legends won’t just attend — They’ll be made.
   </p>
 
 
   <p className="text-lg md:text-xl leading-relaxed">
-    At AGR0x01, we’re building a space for raw talks, war-room style workshops, hacker villages, 
-    and a CTF that’s more battle than game. This is for the self-taught, the late-night learners, 
-    the ones who stayed up reading RFCs while the world scrolled reels, and for the defenders who 
-    burn logs in SOCs while red teamers break binaries. BSides Agra isn’t about suits, titles, or 
-    corporate polish — it’s about community, chaos, and creation. Here, firewalls will fall, 
-    payloads will drop, and minds will evolve. 
-    From heritage to hack, this is where India’s next wave of cybersecurity culture begins.
+    At AGR0x01, we’re building a space for raw talks, war-room <br />
+    style workshops, hacker villages, and a CTF that’s more battle <br />
+    than game. This is for the self-taught, the late-night learners, <br />
+    the ones who stayed up reading RFCs while the world scrolled reels, <br />
+    and for the defenders who burn logs in SOCs while red teamers break <br />
+    binaries. BSides Agra isn’t about suits, titles, or corporate polish — it’s <br /> 
+    about community, chaos, and creation. Here, firewalls will fall, payloads will drop, 
+    and minds will evolve. From heritage to hack, this is where India’s next wave of <br />
+    cybersecurity culture begins.
   </p>
 </div>
 
