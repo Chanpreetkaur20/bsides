@@ -317,17 +317,17 @@ const Speakers = () => {
             transition={{ delay: 0.8 }}
           >
             <div className="bg-gray-800 rounded-2xl p-12">
-              <h3 className="text-3xl font-bold mb-4">Want to Speak at BSides Agra?</h3>
+              <h3 className="text-3xl font-bold mb-4">Submit Your Talk for BSides Agra 2025</h3>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                We're looking for passionate security professionals to share their
-                knowledge and experiences.
+                | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage. | <br/>
+BSides Agra 0x01 is calling those who live, breathe, and break cybersecurity.
               </p>
               <motion.button
                 className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Submit Your Talk
+                Call for Papers
               </motion.button>
             </div>
           </motion.div>
