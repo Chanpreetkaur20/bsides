@@ -85,10 +85,11 @@ const About = () => {
 
             <div className="space-y-6 text-left">
   <p className="text-lg md:text-xl leading-relaxed">
-    BSides Agra is not just another cybersecurity conference — it’s<br />
-  a rebellion carved in red stone. For the first time, 
-  the Taj city becomes the arena where hacker grit collides with heritage, and the underground 
-  rises to the spotlight. This is where legends won’t just attend — they’ll be made.
+  BSides Agra is not just another cybersecurity conference — it’s<br />
+  a rebellion carved in red stone. For the first time, the Taj citys<br />
+  becomes the arena where hacker grit collides with heritage,s<br />
+  and the underground rises to the spotlight.s<br />
+  This is where legends won’t just attend — they’ll be made.
   </p>
 
 
