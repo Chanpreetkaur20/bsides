@@ -78,7 +78,7 @@ const About = () => {
           </div>
 
           {/* Right Column - About BSides Agra */}
-          <div className="text-white">
+          <div className="text-white pl-6">
             <h4 className="text-4xl md:text-5xl font-bold text-white mb-8 text-left">
               About BSides Agra
             </h4>
