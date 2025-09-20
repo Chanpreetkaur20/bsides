@@ -138,15 +138,18 @@ const Contact = () => {
                       Full Name *
                     </label>
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors bg-white/70 backdrop-blur-sm"
-                      placeholder="Your full name"
-                    />
+  type="text"
+  id="name"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  required
+  className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+             focus:ring-2 focus:ring-primary focus:border-transparent 
+             transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+  placeholder="Your full name"
+/>
+
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
