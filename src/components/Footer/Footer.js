@@ -41,10 +41,7 @@ const Footer = () => {
               className="h-[250px] object-contain"
             />
           </div>
-            <div className="flex items-center space-x-2 text-gray-300 text-base">
-              <Mail size={18} className="text-primary flex-shrink-0" />
-              <span>contact@bsidesagra.in</span>
-            </div>
+            
             <div className="flex space-x-3 mt-2">
               {socialLinks.map((social, index) => (
                 <a
@@ -58,6 +55,10 @@ const Footer = () => {
                   <social.icon size={20} />
                 </a>
               ))}
+            </div>
+            <div className="flex items-center space-x-2 text-gray-300 text-base">
+              <Mail size={18} className="text-primary flex-shrink-0" />
+              <span>contact@bsidesagra.in</span>
             </div>
           </div>
 
