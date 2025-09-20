@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
             <div className="flex items-center space-x-2 text-gray-300 text-base">
               <Mail size={18} className="text-primary flex-shrink-0" />
-              <span>info@bsidesagra.in</span>
+              <span>contact@bsidesagra.in</span>
             </div>
             <div className="flex space-x-3 mt-2">
               {socialLinks.map((social, index) => (
