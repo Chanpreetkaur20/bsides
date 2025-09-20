@@ -138,17 +138,17 @@ const Contact = () => {
                       Full Name *
                     </label>
                     <input
-  type="text"
-  id="name"
-  name="name"
-  value={formData.name}
-  onChange={handleChange}
-  required
-  className="w-full px-4 py-3 border border-gray-300 rounded-lg 
-             focus:ring-2 focus:ring-primary focus:border-transparent 
-             transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
-  placeholder="Your full name"
-/>
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                                  focus:ring-2 focus:ring-primary focus:border-transparent 
+                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                        placeholder="Your full name"
+                      />
 
                   </div>
                   <div>
@@ -156,15 +156,18 @@ const Contact = () => {
                       Email Address *
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors bg-white/70 backdrop-blur-sm"
-                      placeholder="your@email.com"
-                    />
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                                  focus:ring-2 focus:ring-primary focus:border-transparent 
+                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                        placeholder="your@email.com"
+                      />
+
                   </div>
                 </div>
 
@@ -173,14 +176,17 @@ const Contact = () => {
                     Company/Organization
                   </label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors bg-white/70 backdrop-blur-sm"
-                    placeholder="Your company or organization"
-                  />
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                                focus:ring-2 focus:ring-primary focus:border-transparent 
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                      placeholder="Your company or organization"
+                    />
+
                 </div>
 
                 <div>
@@ -188,18 +194,21 @@ const Contact = () => {
                     Inquiry Type
                   </label>
                   <select
-                    id="type"
-                    name="type"
-                    value={formData.type}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors bg-white/70 backdrop-blur-sm"
-                  >
-                    <option value="general">General Inquiry</option>
-                    <option value="speaker">Speaker Application</option>
-                    <option value="sponsor">Sponsorship</option>
-                    <option value="media">Media & Press</option>
-                    <option value="volunteer">Volunteer</option>
+                      id="type"
+                      name="type"
+                      value={formData.type}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                                focus:ring-2 focus:ring-primary focus:border-transparent 
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                    >
+                      <option value="general">General Inquiry</option>
+                      <option value="speaker">Speaker Application</option>
+                      <option value="sponsor">Sponsorship</option>
+                      <option value="media">Media & Press</option>
+                      <option value="volunteer">Volunteer</option>
                   </select>
+
                 </div>
 
                 <div>
@@ -213,9 +222,12 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors bg-white/70 backdrop-blur-sm resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                              focus:ring-2 focus:ring-primary focus:border-transparent 
+                              transition-colors bg-white/70 backdrop-blur-sm resize-none text-gray-900"
                     placeholder="Tell us about your inquiry..."
                   />
+
                 </div>
 
                 <motion.button
