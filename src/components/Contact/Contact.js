@@ -40,13 +40,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@bsidesagra.com',
+      details: 'contact@bsidesagra.com',
       description: 'Get in touch for general inquiries'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+91 98765 43210',
+      details: '+91 89584 87060',
       description: 'Speak directly with our team'
     },
     {
