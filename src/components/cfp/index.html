@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSides Agra CFP</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Matrix-style background animation */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #7f1d1d 100%);
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid #ef4444;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circuit" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 10h20M10 0v20M5 5h10v10H5z" fill="none" stroke="rgba(239,68,68,0.2)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23circuit)"/></svg>');
+            animation: circuitFlow 20s linear infinite;
+        }
+        
+        @keyframes circuitFlow {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(20px) translateY(20px); }
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1.5rem;
+        }
+        
+        .logo-image {
+            height: 80px;
+            width: auto;
+            border-radius: 8px;
+            border: 2px solid rgba(239,68,68,0.3);
+            box-shadow: 0 0 30px rgba(239,68,68,0.4);
+            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.1);
+            padding: 8px;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(239,68,68,0.6);
+            border-color: rgba(239,68,68,0.6);
+        }
+        
+        .logo-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 0 20px rgba(239,68,68,0.6);
+            background: linear-gradient(45deg, #ffffff, #fca5a5, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .date {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .welcome-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 100%);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(239,68,68,0.1);
+        }
+        
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ef4444, #dc2626, #ef4444, transparent);
+            animation: scanLine 3s ease-in-out infinite;
+        }
+        
+        @keyframes scanLine {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        .welcome-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.8rem;
+            color: #ef4444;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            text-shadow: 0 0 10px rgba(239,68,68,0.5);
+        }
+        
+        .welcome-title::before {
+            content: '> ';
+            color: #10b981;
+            margin-right: 0.5rem;
+            text-shadow: 0 0 5px rgba(16,185,129,0.8);
+        }
+        
+        .welcome-text {
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+        
+        .topics-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        
+        .topic-item {
+            background: rgba(239,68,68,0.08);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .topic-item::before {
+            content: '#';
+            color: #10b981;
+            margin-right: 0.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(16,185,129,0.8);
+        }
+        
+        .topic-item:hover {
+            background: rgba(239,68,68,0.15);
+            border-color: #ef4444;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(239,68,68,0.3);
+        }
+        
+        /* Form Styles */
+        .form-container {
+            background: #111111;
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 12px;
+            padding: 3rem;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            background: linear-gradient(45deg, #ef4444, #dc2626, #991b1b, #ef4444);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .form-container:hover::before {
+            opacity: 0.3;
+        }
+        
+        .form-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            color: #ef4444;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(239,68,68,0.5);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #ef4444;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-label::before {
+            content: '$ ';
+            color: #10b981;
+            text-shadow: 0 0 5px rgba(16,185,129,0.8);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid rgba(239,68,68,0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #ef4444;
+            box-shadow: 0 0 20px rgba(239,68,68,0.4);
+            background: rgba(0,0,0,0.9);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            background: rgba(239,68,68,0.05);
+            border: 1px solid rgba(239,68,68,0.2);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .checkbox-item:hover {
+            background: rgba(239,68,68,0.1);
+            border-color: rgba(239,68,68,0.4);
+        }
+        
+        .checkbox-item input[type="checkbox"], .checkbox-item input[type="radio"] {
+            margin-right: 0.8rem;
+            width: 18px;
+            height: 18px;
+            accent-color: #ef4444;
+        }
+        
+        .checkbox-item label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: #cccccc;
+            cursor: pointer;
+        }
+        
+        .file-upload {
+            border: 2px dashed rgba(239,68,68,0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            background: rgba(239,68,68,0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .file-upload:hover {
+            border-color: #ef4444;
+            background: rgba(239,68,68,0.1);
+        }
+        
+        .file-upload-text {
+            font-family: 'JetBrains Mono', monospace;
+            color: #cccccc;
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-upload-subtext {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .note {
+            background: rgba(239,68,68,0.08);
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: #ef4444;
+            margin-bottom: 0.8rem;
+        }
+        
+        .note-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #991b1b 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(239,68,68,0.5);
+        }
+        
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border-top: 1px solid rgba(239,68,68,0.2);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            .logo {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .logo-image {
+                height: 60px;
+            }
+            
+            .logo-text {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .welcome-section {
+                padding: 1.5rem;
+            }
+            
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .topics-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix background -->
+    <canvas class="matrix-bg" id="matrix"></canvas>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="assets/image.png" alt="BSides Agra Logo" class="logo-image">
+                <div class="logo-text">BSides Agra</div>
+            </div>
+            <div class="tagline">Security BSides Agra - December 5th & 6th 2025</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="welcome-section">
+            <h2 class="welcome-title">Welcome to BSides Agra's Call for Papers!</h2>
+            <p class="welcome-text">
+                We're excited to invite the community to share cutting-edge research, real-world case 
+                studies, and hands-on techniques. While you're welcome to submit on any security topic, 
+                here's a non-exhaustive list of areas we're especially interested in:
+            </p>
+            
+            <div class="topics-list">
+                <div class="topic-item">Hardware Hacking / IoT Security / OT Security</div>
+                <div class="topic-item">Maritime Security / Aviation Security</div>
+                <div class="topic-item">Web3 / Blockchain / Smart Contract Security / DeFi Exploits</div>
+                <div class="topic-item">Web Application Security / AppSec / Bug Bounty</div>
+                <div class="topic-item">Game Hacking / Anti-Cheat Bypass</div>
+                <div class="topic-item">CVE / N-day / 0-day Research / Vulnerability Chaining</div>
+                <div class="topic-item">AI / ML Security / Adversarial Machine Learning</div>
+                <div class="topic-item">Cloud Security / Kubernetes / Container Security / Supply Chain Attacks</div>
+                <div class="topic-item">Red Teaming / Purple Teaming / Threat Hunting</div>
+                <div class="topic-item">Social Engineering / OSINT</div>
+            </div>
+        </div>
+        
+        <form class="form-container">
+            <h2 class="form-title">// SUBMIT YOUR PROPOSAL</h2>
+            
+            <div class="form-group">
+                <label class="form-label" for="name">Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="company">Company *</label>
+                <input type="text" id="company" name="company" class="form-input" placeholder="Your organization" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="linkedin">LinkedIn / X *</label>
+                <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label" for="talk-title">Talk Title *</label>
+                <input type="text" id="talk-title" name="talk-title" class="form-input" placeholder="Your presentation title" required>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Talk Level *</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" id="beginner" name="talk-level" value="beginner" required>
+                        <label for="beginner">Beginner</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="intermediate" name="talk-level" value="intermediate" required>
+                        <label for="intermediate">Intermediate</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="advanced" name="talk-level" value="advanced" required>
+                        <label for="advanced">Advanced</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Talk Duration *</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="radio" id="30min" name="duration" value="30" required>
+                        <label for="30min">30 Minutes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="45min" name="duration" value="45" required>
+                        <label for="45min">45 Minutes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="radio" id="1hour" name="duration" value="60" required>
+                        <label for="1hour">1 Hour</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Slides / PDF *</label>
+                <div class="file-upload">
+                    <div class="file-upload-text">📎 Click to choose a file or drag here</div>
+                    <div class="file-upload-subtext">Accepts: PDF, PPT, PPTX files<br>Size limit: 10 MB</div>
+                    <input type="file" id="slides" name="slides" accept=".pdf,.ppt,.pptx" style="display: none;" required>
+                </div>
+            </div>
+            
+            <div class="note">
+                <div class="note-title">📋 Note:</div>
+                <div class="note-text">
+                    At this time, we are unable to provide travel support for speakers. We encourage 
+                    applicants to seek sponsorship or support from their employer or affiliated organization. If 
+                    you need assistance making a case to your organization, we're happy to provide a formal 
+                    invitation or supporting materials. Thank you for understanding.
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                EXECUTE SUBMISSION //
+            </button>
+        </form>
+        
+        <div class="footer">
+            <div>Made with 🧡 by BSides Agra Team</div>
+        </div>
+    </div>
+    
+    <script>
+        // Matrix background effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*(){}[]|;':\",./<>?";
+        const matrixArray = matrix.split("");
+        
+        const fontSize = 10;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for(let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#ef4444';
+            ctx.font = fontSize + 'px monospace';
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = matrixArray[Math.floor(Math.random() * matrixArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 50);
+        
+        // File upload handling
+        const fileUpload = document.querySelector('.file-upload');
+        const fileInput = document.getElementById('slides');
+        
+        fileUpload.addEventListener('click', () => fileInput.click());
+        
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const fileName = file.name;
+                fileUpload.innerHTML = `
+                    <div class="file-upload-text">✅ ${fileName}</div>
+                    <div class="file-upload-subtext">File uploaded successfully</div>
+                `;
+            }
+        });
+        
+        // Form submission
+        document.querySelector('.form-container').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Form submitted successfully! We\'ll get back to you soon.');
+        });
+        
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
