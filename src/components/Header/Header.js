@@ -25,7 +25,7 @@ const Header = () => {
       dropdownItems: [
         { name: "Sponsors", href: "#sponsors" },
         { name: "Speakers", href: "#speakers" },
-        { name: "Call for Papers", href: "#cfp" },
+        { name: "Call for Papers", href: "/cfp" },
       ],
     },
     { name: "Schedule", href: "#schedule" },
