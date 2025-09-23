@@ -16,7 +16,7 @@ const Footer = () => {
   // Footer link sections based on user image
   const quickLinks = [
     { name: 'Register Now', href: '#register' },
-    { name: 'Call for Papers', href: '#cfp' },
+    { name: 'Call for Papers', href: '/cfp' },
     { name: 'Sponsors', href: '#sponsors' },
     { name: 'Speakers', href: '#speakers' },
     { name: 'Schedule', href: '#schedule' },

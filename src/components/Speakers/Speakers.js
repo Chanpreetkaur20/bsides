@@ -324,13 +324,17 @@ const Speakers = () => {
   BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.
 </p>
 
-              <motion.button
-                className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Call for Papers
-              </motion.button>
+              <motion.a
+  href="/cfp.html"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors inline-block text-center"
+>
+  Call for Papers
+</motion.a>
+
             </div>
           </motion.div>
         </div>
