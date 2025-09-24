@@ -580,6 +580,23 @@
     </button>
 </form>
 
+<script>
+async function testPost() {
+    let data = new FormData();
+    data.append("name", "Chanpreet");
+    data.append("email", "test@example.com");
+
+    let res = await fetch("https://snp.xo.je/sp/", {
+        method: "POST",
+        body: data
+    });
+
+    let text = await res.text();
+    console.log("Response:", text);
+}
+testPost();
+</script>
+
         
         <!-- <form class="form-container">
             <h2 class="form-title">// SUBMIT YOUR PROPOSAL</h2>
