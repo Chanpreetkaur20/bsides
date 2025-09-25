@@ -491,114 +491,10 @@
             </div>
         </div>
 
-        <form class="form-container" action="https://snp.xo.je/sp/" method="POST" enctype="multipart/form-data">
-    <h2 class="form-title">// SUBMIT YOUR PROPOSAL</h2>
-    
-    <div class="form-group">
-        <label class="form-label" for="name">Name *</label>
-        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="email">Email *</label>
-        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="company">Company *</label>
-        <input type="text" id="company" name="company" class="form-input" placeholder="Your organization" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="linkedin">LinkedIn / X *</label>
-        <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/yourprofile" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="talk-title">Talk Title *</label>
-        <input type="text" id="talk-title" name="talk-title" class="form-input" placeholder="Your presentation title" required>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label">Talk Level *</label>
-        <div class="checkbox-group">
-            <div class="checkbox-item">
-                <input type="radio" id="beginner" name="talk-level" value="beginner" required>
-                <label for="beginner">Beginner</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="radio" id="intermediate" name="talk-level" value="intermediate" required>
-                <label for="intermediate">Intermediate</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="radio" id="advanced" name="talk-level" value="advanced" required>
-                <label for="advanced">Advanced</label>
-            </div>
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label">Talk Duration *</label>
-        <div class="checkbox-group">
-            <div class="checkbox-item">
-                <input type="radio" id="30min" name="duration" value="30" required>
-                <label for="30min">30 Minutes</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="radio" id="45min" name="duration" value="45" required>
-                <label for="45min">45 Minutes</label>
-            </div>
-            <div class="checkbox-item">
-                <input type="radio" id="1hour" name="duration" value="60" required>
-                <label for="1hour">1 Hour</label>
-            </div>
-        </div>
-    </div>
-    
-    <div class="form-group">
-        <label class="form-label" for="slides">Slides / PDF *</label>
-        <input type="file" id="slides" name="slides" accept=".pdf,.ppt,.pptx" required>
-    </div>
-    
-    <div class="note">
-        <div class="note-title">📋 Note:</div>
-        <div class="note-text">
-            At this time, we are unable to provide travel support for speakers. We encourage 
-            applicants to seek sponsorship or support from their employer or affiliated organization. If 
-            you need assistance making a case to your organization, we're happy to provide a formal 
-            invitation or supporting materials. Thank you for understanding.
-        </div>
-    </div>
-    
-    <button type="submit" class="submit-btn">
-        EXECUTE SUBMISSION //
-    </button>
-</form>
-
-<script>
-async function testPost() {
-    let data = new FormData();
-    data.append("name", "Chanpreet");
-    data.append("email", "test@example.com");
-
-    let res = await fetch("https://techmaticsolutions.com/np/index.php", {
-        method: "POST",
-        body: data
-    });
-
-    let text = await res.text();
-    console.log("Response:", text);
-}
-testPost();
-</script>
+        
 
         
-        <!-- <form class="form-container">
+        <form class="form-container">
             <h2 class="form-title">// SUBMIT YOUR PROPOSAL</h2>
             
             <div class="form-group">
@@ -689,7 +585,7 @@ testPost();
             <button type="submit" class="submit-btn">
                 EXECUTE SUBMISSION //
             </button>
-        </form> -->
+        </form>
         
         <div class="footer">
             <div>Made with 🧡 by BSides Agra Team</div>
