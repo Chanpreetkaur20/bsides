@@ -10,6 +10,7 @@ import Events from './components/Events/Events';
 import FAQ from './components/FAQ/FAQ';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import CFP from "./components/CFP/Cfp";
 import SplashCursor from './components/SplashCursor/TargetCursor';
 import './App.css';
 
