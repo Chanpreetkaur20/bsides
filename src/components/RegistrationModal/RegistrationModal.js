@@ -101,75 +101,75 @@ const RegistrationModal = ({ isOpen, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-2 sm:p-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
       >
         <motion.div
-          className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+          className="bg-white rounded-xl sm:rounded-2xl shadow-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Register for BSides Agra 2025</h2>
-              <p className="text-gray-600 mt-1">Step {currentStep} of 3</p>
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">Register for BSides Agra 2025</h2>
+              <p className="text-sm sm:text-base text-gray-600 mt-1">Step {currentStep} of 3</p>
             </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors p-2 rounded-lg hover:bg-gray-100"
+              className="text-gray-400 hover:text-gray-600 transition-colors p-1.5 sm:p-2 rounded-lg hover:bg-gray-100"
             >
-              <X size={24} />
+              <X size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
 
           {/* Progress Bar */}
-          <div className="px-6 py-4">
-            <div className="flex items-center space-x-4">
+          <div className="px-4 sm:px-6 py-3 sm:py-4">
+            <div className="flex items-center justify-between sm:space-x-4">
               {[1, 2, 3].map((step) => (
                 <div key={step} className="flex items-center">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
+                  <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium ${
                     step <= currentStep 
                       ? 'bg-primary text-white' 
                       : 'bg-gray-200 text-gray-600'
                   }`}>
-                    {step < currentStep ? <Check size={16} /> : step}
+                    {step < currentStep ? <Check size={12} className="sm:w-4 sm:h-4" /> : step}
                   </div>
                   {step < 3 && (
-                    <div className={`w-16 h-1 mx-2 ${
+                    <div className={`w-8 sm:w-16 h-0.5 sm:h-1 mx-1 sm:mx-2 ${
                       step < currentStep ? 'bg-primary' : 'bg-gray-200'
                     }`} />
                   )}
                 </div>
               ))}
             </div>
-            <div className="flex justify-between mt-2 text-sm text-gray-600">
-              <span>Registration Type</span>
-              <span>Personal Info</span>
-              <span>Payment</span>
+            <div className="flex justify-between mt-2 text-xs sm:text-sm text-gray-600">
+              <span className="text-center">Registration Type</span>
+              <span className="text-center">Personal Info</span>
+              <span className="text-center">Payment</span>
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-6">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-6">
             {/* Step 1: Registration Type */}
             {currentStep === 1 && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Choose Your Registration Type</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Choose Your Registration Type</h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
                   {registrationTypes.map((type) => (
                     <div
                       key={type.id}
-                      className={`relative border-2 rounded-xl p-6 cursor-pointer transition-all ${
+                      className={`relative border-2 rounded-xl p-4 sm:p-6 cursor-pointer transition-all ${
                         formData.registrationType === type.id
                           ? 'border-primary bg-primary/5'
                           : 'border-gray-200 hover:border-gray-300'
@@ -177,27 +177,27 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       onClick={() => setFormData({ ...formData, registrationType: type.id })}
                     >
                       {type.popular && (
-                        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                          <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
+                        <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-primary text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs font-medium">
                             Most Popular
                           </span>
                         </div>
                       )}
                       
                       <div className="text-center">
-                        <h4 className="text-lg font-bold text-gray-900 mb-2">{type.name}</h4>
-                        <p className="text-sm text-gray-600 mb-4">{type.dates}</p>
+                        <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{type.name}</h4>
+                        <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">{type.dates}</p>
                         
-                        <div className="mb-4">
-                          <span className="text-2xl font-bold text-primary">{type.price}</span>
-                          <span className="text-sm text-gray-500 line-through ml-2">{type.originalPrice}</span>
+                        <div className="mb-3 sm:mb-4">
+                          <span className="text-xl sm:text-2xl font-bold text-primary">{type.price}</span>
+                          <span className="text-xs sm:text-sm text-gray-500 line-through ml-2">{type.originalPrice}</span>
                         </div>
                         
-                        <ul className="text-sm text-gray-600 space-y-2">
+                        <ul className="text-xs sm:text-sm text-gray-600 space-y-1.5 sm:space-y-2">
                           {type.features.map((feature, index) => (
-                            <li key={index} className="flex items-center">
-                              <Check size={16} className="text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                            <li key={index} className="flex items-start text-left">
+                              <Check size={14} className="text-green-500 mr-2 flex-shrink-0 mt-0.5 sm:w-4 sm:h-4" />
+                              <span className="leading-tight">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -213,13 +213,13 @@ const RegistrationModal = ({ isOpen, onClose }) => {
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Personal Information</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">Personal Information</h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       First Name *
                     </label>
                     <input
@@ -228,12 +228,12 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Last Name *
                     </label>
                     <input
@@ -242,12 +242,12 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Email Address *
                     </label>
                     <input
@@ -256,12 +256,12 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -270,12 +270,12 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Organization
                     </label>
                     <input
@@ -283,12 +283,12 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       name="organization"
                       value={formData.organization}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       Job Title
                     </label>
                     <input
@@ -296,19 +296,19 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                       name="jobTitle"
                       value={formData.jobTitle}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                       T-Shirt Size
                     </label>
                     <select
                       name="tshirtSize"
                       value={formData.tshirtSize}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     >
                       <option value="XS">XS</option>
                       <option value="S">S</option>
@@ -321,7 +321,7 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1.5 sm:mb-2">
                     Dietary Requirements (Optional)
                   </label>
                   <textarea
@@ -329,7 +329,7 @@ const RegistrationModal = ({ isOpen, onClose }) => {
                     value={formData.dietaryRequirements}
                     onChange={handleInputChange}
                     rows={3}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm sm:text-base"
                     placeholder="Please let us know about any dietary restrictions or allergies..."
                   />
                 </div>

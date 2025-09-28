@@ -132,7 +132,7 @@ const Contact = () => {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
@@ -144,9 +144,9 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
                                   focus:ring-2 focus:ring-primary focus:border-transparent 
-                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
                         placeholder="Your full name"
                       />
 
@@ -162,9 +162,9 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
                                   focus:ring-2 focus:ring-primary focus:border-transparent 
-                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                                  transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
                         placeholder="your@email.com"
                       />
 
@@ -181,9 +181,9 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
                                 focus:ring-2 focus:ring-primary focus:border-transparent 
-                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
                       placeholder="Your company or organization"
                     />
 
@@ -198,9 +198,9 @@ const Contact = () => {
                       name="type"
                       value={formData.type}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
                                 focus:ring-2 focus:ring-primary focus:border-transparent 
-                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900"
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="speaker">Speaker Application</option>
@@ -221,10 +221,10 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg 
+                    rows={4}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
                               focus:ring-2 focus:ring-primary focus:border-transparent 
-                              transition-colors bg-white/70 backdrop-blur-sm resize-none text-gray-900"
+                              transition-colors bg-white/70 backdrop-blur-sm resize-none text-gray-900 text-sm sm:text-base sm:rows-5"
                     placeholder="Tell us about your inquiry..."
                   />
 

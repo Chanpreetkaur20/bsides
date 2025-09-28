@@ -204,11 +204,11 @@ const Sponsors = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: tierIndex * 0.2 }}
             >
-              <div className="text-center mb-12">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              <div className="text-center mb-8 sm:mb-12">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                   {tier.tier}
                 </h3>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-4">
                   {tier.description}
                 </p>
               </div>
@@ -221,32 +221,32 @@ const Sponsors = () => {
                 {tier.sponsors.map((sponsor, index) => (
                   <motion.div
                     key={sponsor.name}
-                    className="bg-white rounded-xl shadow-card hover-lift p-8 text-center w-full max-w-sm"
+                    className="bg-white rounded-xl shadow-card hover-lift p-4 sm:p-6 md:p-8 text-center w-full max-w-sm"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: tierIndex * 0.2 + index * 0.1 }}
                   >
-                    <div className="w-32 h-32 mx-auto mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto mb-4 sm:mb-6 bg-gray-100 rounded-lg flex items-center justify-center">
                       <img 
                         src={sponsor.logo}
                         alt={sponsor.name}
                         className="max-w-full max-h-full rounded-lg object-contain"
                       />
                     </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                       {sponsor.name}
                     </h4>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-600 text-xs sm:text-sm mb-4">
                       {sponsor.description}
                     </p>
                     <a
                       href={sponsor.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors"
+                      className="inline-flex items-center space-x-1 sm:space-x-2 text-primary hover:text-primary/80 transition-colors text-xs sm:text-sm"
                     >
                       <span>Visit Website</span>
-                      <ExternalLink size={16} />
+                      <ExternalLink size={14} className="sm:w-4 sm:h-4" />
                     </a>
                   </motion.div>
                 ))}

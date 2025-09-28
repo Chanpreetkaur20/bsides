@@ -51,33 +51,33 @@ const Header = () => {
     >
       {/* Dynamic Island Pill */}
       <motion.div
-        className={`flex items-center justify-between rounded-full px-6 ${
+        className={`flex items-center justify-between rounded-full px-4 sm:px-6 ${
           isScrolled ? "py-2" : "py-3"
-        } shadow-xl border border-gray-800`}
+        } shadow-xl border border-gray-800 w-full max-w-[95vw] sm:max-w-none`}
         animate={{
           backgroundColor: isScrolled
             ? "rgba(17, 24, 39, 0.95)" // darker when scrolled
             : "rgba(17, 24, 39, 0.5)",
-          width: isScrolled ? "800px" : "900px",
+          width: isScrolled ? "min(800px, 95vw)" : "min(900px, 95vw)",
           marginTop: isScrolled ? "16px" : "20px",
         }}
         transition={{ duration: 0.4 }}
       >
         {/* Logo */}
         <motion.div
-          className="flex items-center space-x-3 cursor-pointer"
+          className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
           <img
             src="/Agra.png"
             alt="Agra Logo"
-            className="h-10 w-10 object-contain"
+            className="h-8 w-8 sm:h-10 sm:w-10 object-contain"
           />
-          <span className="text-gray-100 font-bold text-lg">AGRA</span>
+          <span className="text-gray-100 font-bold text-base sm:text-lg">AGRA</span>
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
           {navItems.map((item) => (
             <div key={item.name} className="relative">
               {item.hasDropdown ? (
@@ -126,12 +126,12 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <motion.button
-          className="md:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-800 transition-colors"
+          className="lg:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-800 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </motion.button>
       </motion.div>
 
@@ -139,13 +139,13 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="md:hidden absolute top-full mt-3 bg-gray-900/95 border border-gray-800 rounded-2xl shadow-xl w-full max-w-[900px]"
+            className="lg:hidden absolute top-full mt-3 bg-gray-900/95 border border-gray-800 rounded-2xl shadow-xl w-full max-w-[95vw] sm:max-w-[900px] mx-auto"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 py-4 space-y-4">
+            <div className="px-4 sm:px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <div key={item.name}>
                   <a

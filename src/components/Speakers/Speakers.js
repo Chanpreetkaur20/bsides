@@ -214,10 +214,10 @@ const Speakers = () => {
         <HeroParallax products={speakerProducts} />
 
         {/* Overlay content on the parallax section */}
-        <div className="absolute inset-0 flex items-center justify-start z-20 px-8 md:px-16">
+        <div className="absolute inset-0 flex items-center justify-start z-20 px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="text-left text-white max-w-3xl">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -225,7 +225,7 @@ const Speakers = () => {
               Featured <span className="text-red-500">Speakers</span>
             </motion.h1>
             <motion.p
-              className="text-xl md:text-2xl max-w-2xl mx-auto mb-8"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -233,7 +233,7 @@ const Speakers = () => {
               Meet the cybersecurity experts and thought leaders shaping the future of digital security
             </motion.p>
             <motion.button
-              className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors"
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg text-base sm:text-lg transition-colors"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -255,7 +255,7 @@ const Speakers = () => {
         {/* Background Particles */}
         <FloatingParticles count={15} className="opacity-20" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
@@ -263,11 +263,11 @@ const Speakers = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6">
               Speakers <span className="gradient-text">Attending</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 rounded-full"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Learn from industry leaders, security researchers, and cybersecurity
               experts shaping the future of information security.
             </p>
@@ -275,24 +275,24 @@ const Speakers = () => {
 
           {/* Category Tabs */}
           <motion.div
-            className="flex justify-center mb-16"
+            className="flex justify-center mb-12 sm:mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
           >
-            <div className="inline-flex bg-gray-800 rounded-lg p-1">
+            <div className="inline-flex bg-gray-800 rounded-lg p-1 overflow-x-auto max-w-full">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  className={`px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 text-sm sm:text-base whitespace-nowrap ${
                     activeCategory === category.id
                       ? 'bg-red-600 text-white shadow-md'
                       : 'text-gray-400 hover:text-white'
                   }`}
                 >
                   {category.label}
-                  <span className="ml-2 text-sm bg-gray-700 px-2 py-1 rounded-full">
+                  <span className="ml-1 sm:ml-2 text-xs sm:text-sm bg-gray-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full">
                     {category.count}
                   </span>
                 </button>
@@ -311,29 +311,29 @@ const Speakers = () => {
 
           {/* Call for Papers Section */}
           <motion.div
-            className="text-center mt-20"
+            className="text-center mt-12 sm:mt-16 lg:mt-20"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.8 }}
           >
-            <div className="bg-gray-800 rounded-2xl p-12">
-              <h3 className="text-3xl font-bold mb-4">Submit Your Talk for BSides Agra 2025</h3>
-              <p className="text-xl text-gray-300 mb-8 mx-auto text-center whitespace-nowrap">
-  | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |
-  <br/>
-  BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.
-</p>
+            <div className="bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">Submit Your Talk for BSides Agra 2025</h3>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 mx-auto text-center max-w-4xl leading-relaxed">
+                <span className="block sm:inline">| The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |</span>
+                <br className="hidden sm:block"/>
+                <span className="block sm:inline mt-2 sm:mt-0">BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.</span>
+              </p>
 
               <motion.a
-  href="/cfp.html"
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors inline-block text-center"
->
-  Call for Papers
-</motion.a>
+                href="/cfp.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-red-600 hover:bg-red-700 text-white font-bold text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-colors inline-block text-center"
+              >
+                Call for Papers
+              </motion.a>
 
             </div>
           </motion.div>

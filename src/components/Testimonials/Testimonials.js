@@ -138,9 +138,9 @@ const Testimonials = () => {
 
       <div className="container mx-auto px-6 relative z-20">
         {/* Section Header */}
-        <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} className="text-center mb-20">
+        <motion.div ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} className="text-center mb-12 sm:mb-16 md:mb-20">
           <motion.div variants={itemVariants}>
-            <h2 className="text-5xl md:text-7xl font-poppins font-bold mb-8 text-gray-100">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold mb-6 sm:mb-8 text-gray-100">
               <DecryptedText
                 text="Testimonials"
                 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
@@ -151,10 +151,10 @@ const Testimonials = () => {
                 revealDirection="start"
               />
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full"></div>
+            <div className="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 sm:mb-12 rounded-full"></div>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light px-4">
               <DecryptedText
                 text="Expert voices from cybersecurity trailblazers who have experienced AGRA"
                 className="text-gray-300"
@@ -181,18 +181,18 @@ const Testimonials = () => {
         </div>
 
         {/* Stats Section */}
-        <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 z-20 relative">
+        <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 md:mt-20 z-20 relative">
           {[
             { icon: Users, number: '500+', label: 'Happy Attendees', color: 'from-blue-500 to-cyan-500' },
             { icon: Award, number: '50+', label: 'Expert Speakers', color: 'from-purple-500 to-pink-500' },
             { icon: Heart, number: '98%', label: 'Satisfaction Rate', color: 'from-green-500 to-emerald-500' }
           ].map((stat, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <GlassCard className="text-center p-8 hover:scale-105 transition-all duration-500 cursor-pointer group" opacity="bg-gray-900/40" blur="backdrop-blur-xl">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="h-8 w-8 text-white" />
+              <GlassCard className="text-center p-4 sm:p-6 md:p-8 hover:scale-105 transition-all duration-500 cursor-pointer group" opacity="bg-gray-900/40" blur="backdrop-blur-xl">
+                <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br ${stat.color} rounded-2xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <stat.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-100 mb-3 group-hover:text-white transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-100 mb-2 sm:mb-3 group-hover:text-white transition-colors">
                   <DecryptedText
                     text={stat.number}
                     className="text-gray-100"
@@ -203,7 +203,7 @@ const Testimonials = () => {
                     revealDirection="start"
                   />
                 </h3>
-                <p className="text-gray-300 font-medium">
+                <p className="text-sm sm:text-base text-gray-300 font-medium">
                   <DecryptedText
                     text={stat.label}
                     className="text-gray-300"

@@ -94,9 +94,9 @@ const FAQ = () => {
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full px-4 sm:px-6 py-4 sm:py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
@@ -117,9 +117,9 @@ const FAQ = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6">
+                      <div className="px-4 sm:px-6 pb-4 sm:pb-6">
                         <div className="border-t border-gray-100 pt-4">
-                          <p className="text-gray-700 leading-relaxed">
+                          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>
@@ -139,14 +139,14 @@ const FAQ = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <div className="bg-white rounded-2xl shadow-elegant p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-elegant p-6 sm:p-8 md:p-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
+            <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about BSides Agra 2025.
             </p>
             <motion.button 
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

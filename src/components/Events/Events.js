@@ -138,29 +138,32 @@ const Events = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3 }}
         >
-          <div className="inline-flex bg-gray-100 rounded-lg p-1">
-            {eventTypes.map((type, index) => (
-              <motion.button
-                key={type.id}
-                onClick={() => setActiveTab(type.id)}
-                className={`flex items-center space-x-2 px-6 py-3 text-sm font-semibold rounded-lg transition-all duration-300 ${
-                  activeTab === type.id
-                    ? 'bg-white text-primary shadow-md'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.4 + index * 0.1 }}
-              >
-                <type.icon size={18} />
-                <span>{type.label}</span>
-                <span className="bg-gray-200 px-2 py-1 rounded-full text-xs">
-                  {type.count}
-                </span>
-              </motion.button>
-            ))}
+          <div className="w-full max-w-4xl overflow-x-auto">
+            <div className="inline-flex bg-gray-100 rounded-lg p-1 min-w-full sm:min-w-0">
+              {eventTypes.map((type, index) => (
+                <motion.button
+                  key={type.id}
+                  onClick={() => setActiveTab(type.id)}
+                  className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 whitespace-nowrap ${
+                    activeTab === type.id
+                      ? 'bg-white text-primary shadow-md'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                >
+                  <type.icon size={16} className="sm:w-[18px] sm:h-[18px]" />
+                  <span className="hidden sm:inline">{type.label}</span>
+                  <span className="sm:hidden">{type.label.slice(0, 3)}</span>
+                  <span className="bg-gray-200 px-1 sm:px-2 py-1 rounded-full text-xs">
+                    {type.count}
+                  </span>
+                </motion.button>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -239,13 +242,13 @@ const Events = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8 }}
         >
-          <div className="bg-gray-50 rounded-2xl p-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Join Us?</h3>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 md:p-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Ready to Join Us?</h3>
+            <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Don't miss out on this unique opportunity to learn, network, and grow in the cybersecurity field.
             </p>
             <motion.button 
-              className="btn-primary text-lg px-8 py-4"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

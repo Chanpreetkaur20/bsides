@@ -287,19 +287,19 @@ const Schedule = () => {
 
   return (
     <section id="schedule" className="section-padding bg-white">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-poppins font-bold mb-6 text-gray-900">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6 text-gray-900">
             Event <span className="gradient-text">Schedule</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 rounded-full"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 sm:mb-8 rounded-full"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Four days packed with training, talks, workshops, and networking opportunities. 
             Plan your BSides Agra 2025 experience.
           </p>
@@ -307,7 +307,7 @@ const Schedule = () => {
 
         {/* Day Tabs */}
         <motion.div 
-          className="flex justify-center mb-12 overflow-x-auto"
+          className="flex justify-center mb-8 sm:mb-12 overflow-x-auto px-4 sm:px-0"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3 }}
@@ -317,14 +317,14 @@ const Schedule = () => {
               <button
                 key={day.id}
                 onClick={() => setActiveDay(day.id)}
-                className={`px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
+                className={`px-3 sm:px-4 py-2 sm:py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
                   activeDay === day.id
                     ? 'bg-white text-primary shadow-md'
                     : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
-                <div className="text-sm font-semibold">{day.label}</div>
-                <div className="text-xs text-gray-500">{day.date}</div>
+                <div className="text-xs sm:text-sm font-semibold">{day.label}</div>
+                <div className="text-xs text-gray-500 hidden sm:block">{day.date}</div>
               </button>
             ))}
           </div>
