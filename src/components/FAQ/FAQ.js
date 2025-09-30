@@ -23,11 +23,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What makes BSides Agra different from other conferences?",
-      answer: "BSides Agra isn’t about suits, sales pitches, or polished talks. It’s about raw infosec —— workshops, CTF battles, hacker villages, and community-driven sessions. It’s where firewalls fall, payloads drop, and real stories of hacking unfold."
+      answer: "BSides Agra isn’t about suits, sales pitches, or polished talks. It’s about raw infosec — workshops, CTF battles, hacker villages, and community-driven sessions. It’s where firewalls fall, payloads drop, and real stories of hacking unfold."
     },
     {
       question: "Who can attend BSides Agra?",
-      answer: "Everyone with a spark for cybersecurity —— students, SOC defenders, red team operators, CTI analysts, exploit developers, bug bounty hunters, researchers, and even curious beginners. If you breathe security, you belong here."
+      answer: "Everyone with a spark for cybersecurity — students, SOC defenders, red team operators, CTI analysts, exploit developers, bug bounty hunters, researchers, and even curious beginners. If you breathe security, you belong here."
     },
     {
       question: "Will there be a Capture The Flag (CTF)?",
