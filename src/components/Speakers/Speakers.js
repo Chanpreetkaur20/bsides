@@ -325,7 +325,7 @@ const Speakers = () => {
               </p>
 
               <motion.a
-                href="/cfp.html"
+                href="/cfp"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
