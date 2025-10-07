@@ -210,8 +210,6 @@ const Speakers = () => {
   return (
     <>
       {/* Hero Parallax Section */}
-
-
       {/* <div className="relative bg-black">
         <HeroParallax products={speakerProducts} /> */}
 
@@ -249,9 +247,6 @@ const Speakers = () => {
         </div>
       </div> */}
 
-
-
-
       {/* Main Speakers Section */}
       <section
         id="speakers-content"
@@ -261,7 +256,7 @@ const Speakers = () => {
         <FloatingParticles count={15} className="opacity-20" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* <motion.div
+          <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -276,7 +271,7 @@ const Speakers = () => {
               Learn from industry leaders, security researchers, and cybersecurity
               experts shaping the future of information security.
             </p>
-          </motion.div> */}
+          </motion.div>
 
           {/* Category Tabs */}
           <motion.div
