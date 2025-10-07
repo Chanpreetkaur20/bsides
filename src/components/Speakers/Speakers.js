@@ -256,22 +256,22 @@ const Speakers = () => {
         <FloatingParticles count={15} className="opacity-20" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* <motion.div
+          <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6">
+            {/* <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6">
               Speakers <span className="gradient-text">Attending</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 rounded-full"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Learn from industry leaders, security researchers, and cybersecurity
               experts shaping the future of information security.
-            </p>
-          </motion.div> */}
+            </p> */}
+          </motion.div>
 
           {/* Category Tabs */}
           <motion.div
