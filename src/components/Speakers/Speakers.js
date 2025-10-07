@@ -343,16 +343,16 @@ const Speakers = () => {
 
     <section
   id="cfp-section"
-  className="relative section-padding bg-black text-white overflow-hidden"
+  className="relative bg-black text-white overflow-hidden flex items-center justify-center min-h-screen"
 >
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <motion.div
-      className="text-center mt-12 sm:mt-16 lg:mt-20"
+      className="text-center"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12">
+      <div className="bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg">
         <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
           Submit Your Talk for BSides Agra 2025
         </h3>
@@ -381,6 +381,7 @@ const Speakers = () => {
     </motion.div>
   </div>
 </section>
+
 
 
 
