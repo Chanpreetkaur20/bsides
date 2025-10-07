@@ -358,9 +358,10 @@ const Speakers = () => {
         </h3>
 
         <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 mx-auto text-center max-w-4xl leading-relaxed">
-          <span className="block sm:inline">
-            | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |
-          </span>
+          <span className="block sm:inline whitespace-nowrap">
+  | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |
+</span>
+
           <br className="hidden sm:block" />
           <span className="block sm:inline mt-2 sm:mt-0">
             BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.
