@@ -54,8 +54,8 @@ function App() {
         <About />
         {/* <Testimonials /> */}
          {/* <Schedule />
-        <Events />
-        <Speakers /> */}
+        <Events /> */}
+        <Speakers />
         <Sponsors />
        
         <FAQ />
