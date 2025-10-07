@@ -55,14 +55,14 @@ const Contact = () => {
       details: 'Agra, Uttar Pradesh, India',
       description: 'City of the Taj Mahal'
     }
-    
+  ];
     const quickStats = [
     { icon: Calendar, label: 'Event Date', value: 'March 13-16, 2025' },
     { icon: Clock, label: 'Duration', value: '4 Days' },
     { icon: Users, label: 'Expected Attendees', value: '500+' },
     { icon: Award, label: 'Speakers', value: '50+' }
   ];
-  ];
+  
 
 
   return (
