@@ -248,12 +248,12 @@ const Speakers = () => {
       </div> */}
 
       {/* Main Speakers Section */}
-      <section
+      {/* <section
         id="speakers-content"
         className="relative section-padding bg-black text-white overflow-hidden"
-      >
+      > */}
         {/* Background Particles */}
-        <FloatingParticles count={15} className="opacity-20" />
+        {/* <FloatingParticles count={15} className="opacity-20" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -263,18 +263,18 @@ const Speakers = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            {/* <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-poppins font-bold mb-4 sm:mb-6">
               Speakers <span className="gradient-text">Attending</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8 rounded-full"></div>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Learn from industry leaders, security researchers, and cybersecurity
               experts shaping the future of information security.
-            </p> */}
-          </motion.div>
+            </p>
+          </motion.div> */}
 
           {/* Category Tabs */}
-          <motion.div
+          {/* <motion.div
             className="flex justify-center mb-12 sm:mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -298,19 +298,19 @@ const Speakers = () => {
                 </button>
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Expandable Speaker Cards */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5 }}
           >
             <ExpandableCardDemo cards={speakerCards} />
-          </motion.div>
+          </motion.div> */}
 
           {/* Call for Papers Section */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-12 sm:mt-16 lg:mt-20"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -338,7 +338,55 @@ const Speakers = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+
+    <section
+  id="cfp-section"
+  className="relative section-padding bg-black text-white overflow-hidden"
+>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <motion.div
+      className="text-center mt-12 sm:mt-16 lg:mt-20"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+          Submit Your Talk for BSides Agra 2025
+        </h3>
+
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 mx-auto text-center max-w-4xl leading-relaxed">
+          <span className="block sm:inline">
+            | The firewalls are falling, and the mic is open | This is raw infosec — from the streets to the stage |
+          </span>
+          <br className="hidden sm:block" />
+          <span className="block sm:inline mt-2 sm:mt-0">
+            BSides Agra 0x01 is calling those who live, breathe, and break Cybersecurity.
+          </span>
+        </p>
+
+        <motion.a
+          href="/cfp"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-red-600 hover:bg-red-700 text-white font-bold text-base sm:text-lg md:text-xl px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-colors inline-block text-center"
+        >
+          Call for Papers
+        </motion.a>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
+
+
+
+
     </>
   );
 };
