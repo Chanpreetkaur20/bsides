@@ -25,7 +25,11 @@ const Contact = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitting(false);
+<<<<<<< HEAD
     alert('Thank you for your message! We\'ll get back to you soon.');
+=======
+    alert("Thank you for your message! We'll get back to you soon.");
+>>>>>>> c2a2bc0 (initial commit)
     setFormData({ name: '', email: '', company: '', message: '', type: 'general' });
   };
 
@@ -36,6 +40,10 @@ const Contact = () => {
     });
   };
 
+<<<<<<< HEAD
+=======
+  // ✅ Fixed structure starts here
+>>>>>>> c2a2bc0 (initial commit)
   const contactInfo = [
     {
       icon: Mail,
@@ -55,15 +63,25 @@ const Contact = () => {
       details: 'Agra, Uttar Pradesh, India',
       description: 'City of the Taj Mahal'
     }
+<<<<<<< HEAD
     
     const quickStats = [
+=======
+  ];
+
+  const quickStats = [
+>>>>>>> c2a2bc0 (initial commit)
     { icon: Calendar, label: 'Event Date', value: 'March 13-16, 2025' },
     { icon: Clock, label: 'Duration', value: '4 Days' },
     { icon: Users, label: 'Expected Attendees', value: '500+' },
     { icon: Award, label: 'Speakers', value: '50+' }
   ];
+<<<<<<< HEAD
   ];
 
+=======
+  // ✅ Fixed structure ends here
+>>>>>>> c2a2bc0 (initial commit)
 
   return (
     <section id="contact" className="relative section-padding bg-gradient-to-br from-gray-50 to-white overflow-hidden">
@@ -139,6 +157,7 @@ const Contact = () => {
                       Full Name *
                     </label>
                     <input
+<<<<<<< HEAD
                         type="text"
                         id="name"
                         name="name"
@@ -151,12 +170,26 @@ const Contact = () => {
                         placeholder="Your full name"
                       />
 
+=======
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
+                                focus:ring-2 focus:ring-primary focus:border-transparent 
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
+                      placeholder="Your full name"
+                    />
+>>>>>>> c2a2bc0 (initial commit)
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                       Email Address *
                     </label>
                     <input
+<<<<<<< HEAD
                         type="email"
                         id="email"
                         name="email"
@@ -169,6 +202,19 @@ const Contact = () => {
                         placeholder="your@email.com"
                       />
 
+=======
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
+                                focus:ring-2 focus:ring-primary focus:border-transparent 
+                                transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
+                      placeholder="your@email.com"
+                    />
+>>>>>>> c2a2bc0 (initial commit)
                   </div>
                 </div>
 
@@ -177,6 +223,7 @@ const Contact = () => {
                     Company/Organization
                   </label>
                   <input
+<<<<<<< HEAD
                       type="text"
                       id="company"
                       name="company"
@@ -188,6 +235,18 @@ const Contact = () => {
                       placeholder="Your company or organization"
                     />
 
+=======
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
+                              focus:ring-2 focus:ring-primary focus:border-transparent 
+                              transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
+                    placeholder="Your company or organization"
+                  />
+>>>>>>> c2a2bc0 (initial commit)
                 </div>
 
                 <div>
@@ -195,6 +254,7 @@ const Contact = () => {
                     Inquiry Type
                   </label>
                   <select
+<<<<<<< HEAD
                       id="type"
                       name="type"
                       value={formData.type}
@@ -210,6 +270,22 @@ const Contact = () => {
                       <option value="volunteer">Volunteer</option>
                   </select>
 
+=======
+                    id="type"
+                    name="type"
+                    value={formData.type}
+                    onChange={handleChange}
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg 
+                              focus:ring-2 focus:ring-primary focus:border-transparent 
+                              transition-colors bg-white/70 backdrop-blur-sm text-gray-900 text-sm sm:text-base"
+                  >
+                    <option value="general">General Inquiry</option>
+                    <option value="speaker">Speaker Application</option>
+                    <option value="sponsor">Sponsorship</option>
+                    <option value="media">Media & Press</option>
+                    <option value="volunteer">Volunteer</option>
+                  </select>
+>>>>>>> c2a2bc0 (initial commit)
                 </div>
 
                 <div>
@@ -228,7 +304,10 @@ const Contact = () => {
                               transition-colors bg-white/70 backdrop-blur-sm resize-none text-gray-900 text-sm sm:text-base sm:rows-5"
                     placeholder="Tell us about your inquiry..."
                   />
+<<<<<<< HEAD
 
+=======
+>>>>>>> c2a2bc0 (initial commit)
                 </div>
 
                 <motion.button
@@ -307,6 +386,7 @@ const Contact = () => {
                   Stay updated with the latest news and announcements about BSides Agra 2025.
                 </p>
                 <div className="flex space-x-4">
+<<<<<<< HEAD
                   <motion.a
                     href="#"
                     className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-secondary transition-colors"
@@ -331,6 +411,19 @@ const Contact = () => {
                   >
                     <span className="text-sm font-bold">D</span>
                   </motion.a>
+=======
+                  {['T', 'L', 'D'].map((item, i) => (
+                    <motion.a
+                      key={i}
+                      href="#"
+                      className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-secondary transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      <span className="text-sm font-bold">{item}</span>
+                    </motion.a>
+                  ))}
+>>>>>>> c2a2bc0 (initial commit)
                 </div>
               </GlassCard>
             </motion.div>

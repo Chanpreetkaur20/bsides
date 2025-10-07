@@ -57,8 +57,13 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 sm:mb-16">
           {/* Left Column - Highlights 2024 */}
           <div className="flex flex-col">
+<<<<<<< HEAD
             <div className="bg-[#1a001f] rounded-2xl shadow-lg overflow-hidden mb-8">
               <div className="bg-[#7B2CBF] text-center py-3 sm:py-4">
+=======
+            <div className="rounded-2xl shadow-lg overflow-hidden mb-8">
+              <div className="text-center py-3 sm:py-4">
+>>>>>>> c2a2bc0 (initial commit)
                 <h4 className="text-white text-xl sm:text-2xl md:text-3xl font-bold">
                   Highlights 2024
                 </h4>
@@ -66,12 +71,21 @@ const About = () => {
 
               <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] bg-black">
                 <iframe
+<<<<<<< HEAD
                   src="https://www.youtube.com/embed/XbxIg2zsRs4?list=TLGGuj0NtN87I5AwMTA5MjAyNQ&autoplay=1&mute=1&rel=0&modestbranding=1"
+=======
+                  src="https://www.youtube.com/embed/XbxIg2zsRs4?autoplay=1&mute=1&loop=1&playlist=XbxIg2zsRs4"
+>>>>>>> c2a2bc0 (initial commit)
                   className="w-full h-full"
                   frameBorder="0"
                   allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+<<<<<<< HEAD
                   title="BSides Agra 2024 Highlights">             </iframe>
+=======
+                  >    
+                  </iframe>
+>>>>>>> c2a2bc0 (initial commit)
               </div>
 
             </div>
