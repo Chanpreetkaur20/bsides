@@ -210,11 +210,13 @@ const Speakers = () => {
   return (
     <>
       {/* Hero Parallax Section */}
-      <div className="relative bg-black">
-        <HeroParallax products={speakerProducts} />
+
+
+      {/* <div className="relative bg-black">
+        <HeroParallax products={speakerProducts} /> */}
 
         {/* Overlay content on the parallax section */}
-        <div className="absolute inset-0 flex items-center justify-start z-20 px-4 sm:px-6 md:px-8 lg:px-16">
+        {/* <div className="absolute inset-0 flex items-center justify-start z-20 px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="text-left text-white max-w-3xl">
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
@@ -245,7 +247,10 @@ const Speakers = () => {
             </motion.button>
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+
 
       {/* Main Speakers Section */}
       <section
@@ -256,7 +261,7 @@ const Speakers = () => {
         <FloatingParticles count={15} className="opacity-20" />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
+          {/* <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -271,7 +276,7 @@ const Speakers = () => {
               Learn from industry leaders, security researchers, and cybersecurity
               experts shaping the future of information security.
             </p>
-          </motion.div>
+          </motion.div> */}
 
           {/* Category Tabs */}
           <motion.div
