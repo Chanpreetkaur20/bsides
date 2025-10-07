@@ -47,9 +47,9 @@ const Homepage = () => {
         <Hero />
         <About />
         {/* <Testimonials /> */}
-        <Schedule />
-        <Events />
-        <Speakers />
+        {/* <Schedule /> */}
+        {/* <Events /> */}
+        {/* <Speakers /> */}
         <Sponsors />
         <FAQ />
         <Contact />
